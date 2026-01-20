@@ -1,0 +1,234 @@
+/**
+ * Design Tokens - iOS 18 Inspired Banking System
+ * These tokens should be used throughout the application for consistency
+ */
+
+:root {
+  /* ============================================
+     SPACING SCALE (8px base unit)
+     ============================================ */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-base: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 40px;
+  --spacing-4xl: 48px;
+  --spacing-5xl: 64px;
+
+  /* ============================================
+     TYPOGRAPHY SCALE
+     ============================================ */
+  --font-size-caption: 13px;
+  --font-size-subhead: 15px;
+  --font-size-body: 17px;
+  --font-size-callout: 20px;
+  --font-size-title3: 22px;
+  --font-size-title2: 28px;
+  --font-size-title1: 34px;
+  --font-size-large-title: 40px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
+
+  /* ============================================
+     COLOR SYSTEM - Banking Focused
+     ============================================ */
+  
+  /* Primary - Trust Blue (iOS system blue inspired) */
+  --color-primary-50: oklch(0.97 0.02 250);
+  --color-primary-100: oklch(0.94 0.04 250);
+  --color-primary-200: oklch(0.88 0.08 250);
+  --color-primary-300: oklch(0.75 0.12 250);
+  --color-primary-400: oklch(0.65 0.15 250);
+  --color-primary-500: oklch(0.55 0.18 250); /* Main primary */
+  --color-primary-600: oklch(0.48 0.20 250);
+  --color-primary-700: oklch(0.42 0.22 250);
+  --color-primary-800: oklch(0.35 0.24 250);
+  --color-primary-900: oklch(0.28 0.26 250);
+
+  /* Success - Green (deposits, gains) */
+  --color-success-50: oklch(0.97 0.02 145);
+  --color-success-100: oklch(0.94 0.04 145);
+  --color-success-500: oklch(0.55 0.18 145);
+  --color-success-600: oklch(0.48 0.20 145);
+  --color-success-700: oklch(0.42 0.22 145);
+
+  /* Warning - Amber (caution) */
+  --color-warning-50: oklch(0.97 0.02 85);
+  --color-warning-100: oklch(0.94 0.04 85);
+  --color-warning-500: oklch(0.65 0.18 85);
+  --color-warning-600: oklch(0.58 0.20 85);
+  --color-warning-700: oklch(0.52 0.22 85);
+
+  /* Error/Destructive - Red (withdrawals, losses, errors) */
+  --color-error-50: oklch(0.97 0.02 25);
+  --color-error-100: oklch(0.94 0.04 25);
+  --color-error-500: oklch(0.55 0.18 25);
+  --color-error-600: oklch(0.48 0.20 25);
+  --color-error-700: oklch(0.42 0.22 25);
+
+  /* Neutral Grays */
+  --color-gray-50: oklch(0.98 0 0);
+  --color-gray-100: oklch(0.95 0 0);
+  --color-gray-200: oklch(0.90 0 0);
+  --color-gray-300: oklch(0.85 0 0);
+  --color-gray-400: oklch(0.70 0 0);
+  --color-gray-500: oklch(0.55 0 0);
+  --color-gray-600: oklch(0.45 0 0);
+  --color-gray-700: oklch(0.35 0 0);
+  --color-gray-800: oklch(0.25 0 0);
+  --color-gray-900: oklch(0.15 0 0);
+
+  /* Semantic Colors - Light Mode */
+  --color-background: var(--color-gray-50);
+  --color-surface: oklch(1 0 0);
+  --color-surface-elevated: oklch(1 0 0);
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-600);
+  --color-text-tertiary: var(--color-gray-400);
+  --color-border: var(--color-gray-200);
+  --color-divider: var(--color-gray-200);
+
+  /* Financial Semantic Colors */
+  --color-positive: var(--color-success-600);
+  --color-negative: var(--color-error-600);
+  --color-neutral: var(--color-gray-600);
+
+  /* ============================================
+     SHADOW SYSTEM
+     ============================================ */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.15);
+
+  /* ============================================
+     BORDER RADIUS
+     ============================================ */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* ============================================
+     TOUCH TARGETS (iOS Standard)
+     ============================================ */
+  --touch-target-min: 44px;
+
+  /* ============================================
+     ANIMATION TIMING
+     ============================================ */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+
+  --easing-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --easing-decelerate: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --easing-accelerate: cubic-bezier(0.4, 0.0, 1, 1);
+
+  /* ============================================
+     Z-INDEX SCALE
+     ============================================ */
+  --z-base: 0;
+  --z-elevated: 10;
+  --z-sticky: 100;
+  --z-overlay: 1000;
+  --z-modal: 2000;
+  --z-toast: 3000;
+}
+
+/* ============================================
+   DARK MODE OVERRIDES
+   ============================================ */
+.dark {
+  --color-background: var(--color-gray-900);
+  --color-surface: oklch(0.20 0 0);
+  --color-surface-elevated: oklch(0.25 0 0);
+  --color-text-primary: var(--color-gray-50);
+  --color-text-secondary: var(--color-gray-400);
+  --color-text-tertiary: var(--color-gray-500);
+  --color-border: oklch(1 0 0 / 0.1);
+  --color-divider: oklch(1 0 0 / 0.1);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-base: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Spacing Utilities */
+.spacing-xs { gap: var(--spacing-xs); }
+.spacing-sm { gap: var(--spacing-sm); }
+.spacing-md { gap: var(--spacing-md); }
+.spacing-base { gap: var(--spacing-base); }
+.spacing-lg { gap: var(--spacing-lg); }
+.spacing-xl { gap: var(--spacing-xl); }
+
+/* Typography Utilities */
+.text-caption {
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-normal);
+}
+
+.text-subhead {
+  font-size: var(--font-size-subhead);
+  line-height: var(--line-height-normal);
+}
+
+.text-body {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-normal);
+}
+
+.text-title3 {
+  font-size: var(--font-size-title3);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-title2 {
+  font-size: var(--font-size-title2);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-title1 {
+  font-size: var(--font-size-title1);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-large-title {
+  font-size: var(--font-size-large-title);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Financial Number Display */
+.text-financial {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  text-align: right;
+}
+
+/* Touch Target Utilities */
+.touch-target {
+  min-width: var(--touch-target-min);
+  min-height: var(--touch-target-min);
+}
