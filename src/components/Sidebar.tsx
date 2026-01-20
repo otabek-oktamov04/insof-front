@@ -3,15 +3,14 @@ import { cn } from '@/lib/utils'
 import {
   Users,
   MessageSquare,
-  FileText,
-  Settings,
-  BarChart3,
-  Wallet,
   Building2,
   Menu,
   X,
   ChevronLeft,
   ChevronRight,
+  Phone,
+  Mail,
+  LayoutDashboard,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useState } from 'react'
@@ -26,6 +25,12 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   {
+    id: 'dashboard',
+    label: 'Boshqaruv Paneli',
+    icon: LayoutDashboard,
+    path: '/dashboard',
+  },
+  {
     id: 'debtors',
     label: 'Qarzdorlar',
     icon: Users,
@@ -38,34 +43,16 @@ const menuItems: MenuItem[] = [
     path: '/dashboard/sms',
   },
   {
-    id: 'transactions',
-    label: 'Tranzaksiyalar',
-    icon: FileText,
-    path: '/dashboard/transactions',
+    id: 'autocall',
+    label: 'Avtozvon',
+    icon: Phone,
+    path: '/dashboard/autocall',
   },
   {
-    id: 'reports',
-    label: 'Hisobotlar',
-    icon: BarChart3,
-    path: '/dashboard/reports',
-  },
-  {
-    id: 'accounts',
-    label: 'Hisoblar',
-    icon: Wallet,
-    path: '/dashboard/accounts',
-  },
-  {
-    id: 'organizations',
-    label: 'Tashkilotlar',
-    icon: Building2,
-    path: '/dashboard/organizations',
-  },
-  {
-    id: 'settings',
-    label: 'Sozlamalar',
-    icon: Settings,
-    path: '/dashboard/settings',
+    id: 'mail',
+    label: 'Pochta',
+    icon: Mail,
+    path: '/dashboard/mail',
   },
 ]
 
@@ -85,7 +72,10 @@ export default function Sidebar({ className }: SidebarProps) {
   }
 
   const isActive = (path: string) => {
-    return location.pathname === path
+    if (path === '/dashboard') {
+      return location.pathname === '/dashboard'
+    }
+    return location.pathname.startsWith(path)
   }
 
   return (
