@@ -9,27 +9,27 @@ export default function BankingCardExample() {
       {/* Account Balance Card */}
       <div className="banking-card" style={{ marginBottom: 'var(--spacing-base)' }}>
         <p className="text-subhead" style={{ color: 'var(--color-text-secondary)', marginBottom: 'var(--spacing-sm)' }}>
-          Total Balance
+          Jami balans
         </p>
         <p className="amount-display amount-neutral">$50,000.00</p>
         <div style={{ display: 'flex', gap: 'var(--spacing-sm)', marginTop: 'var(--spacing-base)' }}>
-          <span className="badge badge-success">+$500 this month</span>
+          <span className="badge badge-success">+$500 bu oy</span>
         </div>
       </div>
 
       {/* Transaction List Card */}
       <div className="banking-card">
         <h3 className="text-title3" style={{ marginBottom: 'var(--spacing-base)' }}>
-          Recent Transactions
+          So'nggi tranzaksiyalar
         </h3>
         
         <div className="transaction-item">
           <div>
             <p className="text-body" style={{ fontWeight: 'var(--font-weight-medium)' }}>
-              Salary Deposit
+              Maosh o'tkazmasi
             </p>
             <p className="text-caption" style={{ color: 'var(--color-text-secondary)' }}>
-              Work • Jan 15, 2024
+              Ish • 15 Yan, 2024
             </p>
           </div>
           <div className="text-financial">
@@ -42,10 +42,10 @@ export default function BankingCardExample() {
         <div className="transaction-item">
           <div>
             <p className="text-body" style={{ fontWeight: 'var(--font-weight-medium)' }}>
-              Grocery Store
+              Oziq-ovqat do'koni
             </p>
             <p className="text-caption" style={{ color: 'var(--color-text-secondary)' }}>
-              Shopping • Jan 14, 2024
+              Xarid • 14 Yan, 2024
             </p>
           </div>
           <div className="text-financial">
@@ -58,10 +58,10 @@ export default function BankingCardExample() {
         <div className="transaction-item">
           <div>
             <p className="text-body" style={{ fontWeight: 'var(--font-weight-medium)' }}>
-              Coffee Shop
+              Kofe do'koni
             </p>
             <p className="text-caption" style={{ color: 'var(--color-text-secondary)' }}>
-              Food & Drink • Jan 14, 2024
+              Ovqat va ichimlik • 14 Yan, 2024
             </p>
           </div>
           <div className="text-financial">
@@ -80,14 +80,14 @@ export default function BankingCardExample() {
         flexDirection: 'column'
       }}>
         <button className="btn btn-primary btn-full-width">
-          Transfer Money
+          Pul o'tkazish
         </button>
         <div style={{ display: 'flex', gap: 'var(--spacing-sm)' }}>
           <button className="btn btn-secondary" style={{ flex: 1 }}>
-            View All
+            Barchasini ko'rish
           </button>
           <button className="btn btn-ghost" style={{ flex: 1 }}>
-            Settings
+            Sozlamalar
           </button>
         </div>
       </div>

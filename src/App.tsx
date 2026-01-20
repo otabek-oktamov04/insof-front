@@ -1,29 +1,27 @@
-import BankingCardExample from './components/examples/BankingCardExample'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { AuthProvider } from './contexts/AuthContext'
+import LoginPage from './pages/LoginPage'
+import DashboardPage from './pages/DashboardPage'
+import ProtectedRoute from './components/ProtectedRoute'
 
 export default function App() {
   return (
-    <div style={{ 
-      minHeight: '100vh', 
-      background: 'var(--color-background)',
-      padding: 'var(--spacing-base)'
-    }}>
-      <div style={{ 
-        maxWidth: '600px', 
-        margin: '0 auto',
-        paddingTop: 'var(--spacing-2xl)'
-      }}>
-        <h1 className="text-title1" style={{ marginBottom: 'var(--spacing-lg)', textAlign: 'center' }}>
-          Banking System
-        </h1>
-        <p className="text-body" style={{ 
-          color: 'var(--color-text-secondary)', 
-          textAlign: 'center',
-          marginBottom: 'var(--spacing-2xl)'
-        }}>
-          iOS 18 Design Principles Example
-        </p>
-        <BankingCardExample />
-      </div>
-    </div>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <DashboardPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   )
 }
