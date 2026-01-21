@@ -4,6 +4,7 @@ import { SidebarProvider } from './contexts/SidebarContext'
 import LoginPage from './pages/LoginPage'
 import DashboardPage from './pages/DashboardPage'
 import DebtorsPage from './pages/DebtorsPage'
+import DebtorDetailPage from './pages/DebtorDetailPage'
 import SMSPage from './pages/SMSPage'
 import AutoCallPage from './pages/AutoCallPage'
 import MailPage from './pages/MailPage'
@@ -21,6 +22,14 @@ export default function App() {
               element={
                 <ProtectedRoute>
                   <DebtorsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/dashboard/debtors/:id"
+              element={
+                <ProtectedRoute>
+                  <DebtorDetailPage />
                 </ProtectedRoute>
               }
             />

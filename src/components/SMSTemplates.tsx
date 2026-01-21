@@ -10,16 +10,16 @@ import {
   Save, 
   X, 
   FileText, 
-  CheckCircle2,
-  AlertCircle,
   Power,
   PowerOff,
   Copy,
   Eye
 } from 'lucide-react'
-import { 
+import type { 
   SMSTemplate, 
-  TemplateType, 
+  TemplateType
+} from '@/data/mockTemplates'
+import { 
   templateTypes, 
   mockTemplates 
 } from '@/data/mockTemplates'

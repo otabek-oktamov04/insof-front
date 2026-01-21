@@ -12,16 +12,17 @@ import {
   FileText, 
   Power,
   PowerOff,
-  Copy,
   Eye,
   Upload,
   Play,
   Pause,
   Volume2
 } from 'lucide-react'
-import { 
+import type { 
   AutoCallTemplate, 
-  AutoCallTemplateType, 
+  AutoCallTemplateType
+} from '@/data/mockAutoCallTemplates'
+import { 
   autoCallTemplateTypes, 
   mockAutoCallTemplates 
 } from '@/data/mockAutoCallTemplates'

@@ -3,8 +3,8 @@
  * Simulates the ELDAP authentication flow
  */
 
-const MOCK_ELDAP_URL = 'https://mock-eldap.example.com/auth'
-const MOCK_CALLBACK_URL = `${window.location.origin}/auth/callback`
+// const MOCK_ELDAP_URL = 'https://mock-eldap.example.com/auth'
+// const MOCK_CALLBACK_URL = `${window.location.origin}/auth/callback`
 
 export interface EldapAuthResponse {
   token: string

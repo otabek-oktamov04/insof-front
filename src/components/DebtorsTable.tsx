@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react'
-import { Debtor } from '@/data/mockDebtors'
+import { useNavigate } from 'react-router-dom'
+import type { Debtor } from '@/data/mockDebtors'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Search, Filter, X, ChevronDown, ChevronUp } from 'lucide-react'
@@ -13,6 +14,7 @@ interface DebtorsTableProps {
 type StatusFilter = 'all' | 'active' | 'overdue' | 'paid' | 'pending'
 
 export default function DebtorsTable({ debtors, totalCount }: DebtorsTableProps) {
+  const navigate = useNavigate()
   const [searchQuery, setSearchQuery] = useState('')
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all')
   const [showFilters, setShowFilters] = useState(false)
@@ -244,10 +246,11 @@ export default function DebtorsTable({ debtors, totalCount }: DebtorsTableProps)
                 filteredAndSortedDebtors.map((debtor, index) => (
                   <tr
                     key={debtor.id}
+                    onClick={() => navigate(`/dashboard/debtors/${debtor.id}`)}
                     className={cn(
                       'border-b border-border',
                       index % 2 === 0 ? 'bg-card' : 'bg-muted/20',
-                      'hover:bg-muted/40 transition-colors'
+                      'hover:bg-muted/40 transition-colors cursor-pointer'
                     )}
                   >
                     <td className="px-6 py-4 whitespace-nowrap">

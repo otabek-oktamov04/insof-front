@@ -1,8 +1,8 @@
 import { useState, useMemo } from 'react'
-import { SMS } from '@/data/mockSMS'
+import type { SMS } from '@/data/mockSMS'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { Search, Filter, X, CheckCircle2, Clock, XCircle, Send, Calendar } from 'lucide-react'
+import { Search, Filter, X, CheckCircle2, Clock, XCircle, Send } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface SMSListProps {

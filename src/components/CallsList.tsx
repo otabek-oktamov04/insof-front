@@ -1,8 +1,8 @@
 import { useState, useMemo } from 'react'
-import { Call } from '@/data/mockCalls'
+import type { Call } from '@/data/mockCalls'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { Search, Filter, X, CheckCircle2, Phone, PhoneOff, PhoneCall, XCircle, Clock, Calendar } from 'lucide-react'
+import { Search, Filter, X, CheckCircle2, Phone, PhoneOff, PhoneCall, XCircle, Clock } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface CallsListProps {

@@ -1,8 +1,8 @@
 import { useState, useMemo } from 'react'
-import { Mail } from '@/data/mockMail'
+import type { Mail } from '@/data/mockMail'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { Search, Filter, X, CheckCircle2, Mail as MailIcon, RotateCcw, XCircle, Clock, Calendar } from 'lucide-react'
+import { Search, Filter, X, CheckCircle2, Mail as MailIcon, RotateCcw, XCircle, Clock } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface MailListProps {

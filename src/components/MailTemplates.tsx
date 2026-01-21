@@ -15,9 +15,11 @@ import {
   Copy,
   Eye
 } from 'lucide-react'
-import { 
+import type { 
   MailTemplate, 
-  MailTemplateType, 
+  MailTemplateType
+} from '@/data/mockMailTemplates'
+import { 
   mailTemplateTypes, 
   mockMailTemplates 
 } from '@/data/mockMailTemplates'
